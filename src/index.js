@@ -1,17 +1,19 @@
+/* 
+Create a new folder
+Open terminal
+Navigate to folder in terminal and run: npx create-react-app ./
+Delete src folder to get rid of template files
+Recreate src folder with this index.js file in it
+Remove all comments and noscript tag from index.html under public folder
+Run: npm install react-icons
+
+To compile & run React app, run: npm start
+*/
+
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom'; // library that allows rendering React components to the DOM
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+import App from './App'; //import our App component
+import './index.css'; //import CSS file containing variables
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ReactDOM.render(<App />, document.getElementById('root')); // render our App component to the DOM

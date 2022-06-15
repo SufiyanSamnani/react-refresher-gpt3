@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
+* { /* Apply these styles to all elements */
+    box-sizing: border-box; /* This is what makes the padding look like padding, including padding & border in the height & width of an element */
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background: var(--color-bg); /* CSS variable for background color, defined in the ./index.css file */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+    color: unset; /* Remove the default color of links */
+    text-decoration: none; /* Remove the default underline of links */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.gradient__bg { /* gradient applied to navbar & header, under div className = gradient__bg -- from angrytools.com */
+    /* ff 3.6+ */
+    background: -moz-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+    /* safari 5.1+,chrome 10+ */
+    background: -webkit-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+    /* opera 11.10+ */
+    background: -o-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+    /* ie 10+ */
+    background: -ms-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+    /* global 92%+ browsers support */
+    background: radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
 }
 
-.App-link {
-  color: #61dafb;
+.gradient__text { /* Make bg gradient, and then make the transparent so the bg shows through & bg is clipped to text */
+    background: var(--gradient-text); /* CSS variable for gradient text color, defined in the ./index.css file */
+    background-clip: text; /* This makes the text clip to the shape of the background, making the bg transparent */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* This makes the text transparent, but the bg still visible */;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.section__padding { /* will have many sections in the page, same padding for all */
+    padding: 4rem 6rem; /* 4rem top & bottom, 6rem left & right */
+}
+
+.section__margin { /* will have many sections in the page, same margin for all */
+    margin: 4rem 6rem; /* root em, multiplier of 16px, which is default font size at <html> for most browsers */
+}
+
+.scale-up-center { /* Scale up animation -- from animista.net */
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes scale-up-center { /* keyframes for scale-up-center animation */
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes scale-up-center { /* keyframes for scale-up-center animation */
+    0% {
+        -webkit-transform: scale(0.5);
+        transform: scale(0.5);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 700px) { /* media query for tablets/big phones, responsive design */
+    .section__padding { /* will be set if the screen is smaller than 700px in width */
+        padding: 4rem;
+    }
+
+    .section__margin {
+        margin: 4rem;
+    }
+}
+
+@media screen and (max-width: 550px) { /* media query for mobile responsive design */
+    .section__padding { /* will be set if the screen is smaller than 550px in width */
+        padding: 4rem 2rem;
+    }
+
+    .section__margin {
+        margin: 4rem 2rem;
+    }
 }
