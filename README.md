@@ -71,4 +71,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 # react-refresher-gpt3
 
-A website in React showcasing features of OpenAI's GPT-3. Built to refresh React skills after not having practiced for a while.
+A website in React showcasing features of OpenAI's GPT-3. Built with the aim to refresh React skills.
