@@ -104,3 +104,37 @@
 .gpt3__navbar-menu_container-links-sign { /* Desktop menu */
     display: none;
 }
+
+@media screen and (max-width: 1050px) {
+    .gpt3__navbar-links_container {
+        display: none;
+    }
+
+    .gpt3__navbar-menu {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 700px) { /* Display menu on tablets */
+    .gpt3__navbar {
+        padding: 2rem 4rem;
+    }
+}
+
+@media screen and (max-width: 550px) { /* Display menu on mobile devices */
+    .gpt3__navbar {
+        padding: 2rem;
+    }
+
+    .gpt3__navbar-sign { /* Hide sign buttons on mobile devices */
+        display: none;
+    }
+
+    .gpt3__navbar-menu_container {
+        top: 20px;
+    }
+
+    .gpt3__navbar-menu_container-links-sign { /* Display sign buttons within menu on mobile devices */
+        display: block;
+    }
+}

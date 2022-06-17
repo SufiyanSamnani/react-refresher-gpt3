@@ -1,0 +1,29 @@
+.gpt3__header {
+    display: flex;
+}
+
+.gpt3__header-content{ /* div containing everything inside of the header */
+    flex: 1; /* the header content will take up all of the space available */
+    display: flex; /* make this its own flex container */
+    justify-content: center;
+    align-items: flex-start; /* flex-start will align the header content to the top */
+    flex-direction: column; /* things in here will be in a column */
+    margin-right: 5rem;
+}
+
+.gpt3__header-content h1 {
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 62px;
+    line-height: 75px;
+    letter-spacing: -0.04em;
+}
+
+.gpt3__header-content p {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    color: var(--color-text);
+    margin-top: 1.5rem;
+}
