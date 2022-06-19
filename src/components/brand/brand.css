@@ -1,0 +1,23 @@
+.gpt3__brand {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.gpt3__brand div img[alt='atlassian'] {
+    /* Use this codepen, start with black & then get filter: https: //codepen.io/sosuke/pen/Pjoqqp */
+    filter: brightness(0) saturate(100%) invert(45%) sepia(28%) saturate(288%) hue-rotate(189deg) brightness(94%) contrast(92%);
+    max-width: 150px;
+    min-width: 120px;
+}
+
+.gpt3__brand div {
+    flex: 1;
+    max-width: 150px;
+    min-width: 120px;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
