@@ -10,7 +10,7 @@ Services only interact with containers (which handle UI interactions), and never
 
 import React from 'react'
 import './whatGPT3.css'
-import { Feature } from '../../components/feature'
+import { Feature } from '../../components' // Link to parent folder because braces are looking for component within it
 
 const WhatGPT3 = () => {
   return (
