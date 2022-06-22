@@ -10,11 +10,23 @@ Services only interact with containers (which handle UI interactions), and never
 
 import React from 'react'
 import './whatGPT3.css'
+import { Feature } from '../../components/feature'
 
 const WhatGPT3 = () => {
   return (
-    <div>
-        WhatGPT3
+    <div className='gpt3__whatgpt3 section__margin' id="wgpt3">
+        <div className='gpt3__whatgpt3-features'>
+          <Feature />
+        </div>
+        <div className='gpt3__whatgpt3-heading'>
+          <h1 className='gradient-text'>The possibilities are beyond your imagination</h1>
+          <p>Explore The Library</p>
+        </div>
+        <div className="gpt3__whatgpt3-container">
+          <Feature />
+          <Feature />
+          <Feature />
+        </div>
     </div>
   )
 }
